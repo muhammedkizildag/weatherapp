@@ -15,7 +15,6 @@ final weatherProvider = FutureProvider(
     var r2 = await http.get(Uri.parse('https://servis.mgm.gov.tr/web/sondurumlar?merkezid=${j[0]["merkezId"]}'),
         headers: {'Origin': 'https://www.mgm.gov.tr'});
 
-    print(r2.body);
 
     var j2 = jsonDecode(r2.body);
 
